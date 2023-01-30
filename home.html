@@ -5,11 +5,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOME</title>
+  <title>숨 쉬는 나의 집, 싱그러운집</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/headicon.jpg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .tab_menu {
+    width: 800px;
+    margin: 200px auto;
+  }
+
+  .tab_item {
+    border: 1px solid green;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  .tab_inner_wrap {
+    margin-top: 20px;
+    background: green;
+    border-radius: 20px;
+  }
+
+  .tab_item.active {
+    background: green;
+    color: #fff;
+  }
+
+  .tab_inner.active {
+    display: flex;
+  }
+</style>
 
 <body>
   <header>
@@ -74,7 +112,7 @@
     </div>
   </header>
   <main>
-    <section class="w1200">
+    <section class="section_slide w1200">
       <article class="slide_wrap">
         <!-- Swiper -->
         <div class="swiper mySwiper ">
@@ -96,20 +134,18 @@
             <div class="swiper-slide"><img class="desk" src="img/221006_093938_384300p.jpg" alt="">
               <img class="mobile" src="img/221006_093938_392700m.jpg" alt=""></div>
           </div>
-
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+          <div class="pagination_container">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination2"></div>
+          </div>
+          <div class="slide_control">
+            <div class="swiper-button-prev slide_prev"></div>
+            <div class="slide_dot"></div>
+            <div class="swiper-button-next slide_next"></div>
+          </div>
         </div>
       </article>
-      <div class="slide_arrow">
-        <ul>
-          <li><a href="#" class="slide_prev"></a></li>
-          <li>1</li>
-          <li class="slide_dot">6</li>
-          <li><a href="#" class="slide_next"></a></li>
-        </ul>
-      </div>
+
     </section>
     <section id="one" class="w1200">
       <ul class="thumnail">
@@ -260,7 +296,7 @@
         <ul>
           <li>
             <a href="#">
-              <h2>식물일기</h2>
+              <h2>스토리</h2>
             </a>
           </li>
           <li>
@@ -272,55 +308,40 @@
       </div>
       <div class="tab2_wrap">
         <ul>
-          <li><a href="#" class="green_active">
-              전체
-            </a></li>
-          <li><a href="#">
-              희귀식물
-            </a></li>
-          <li><a href="#">
-              식물/플라워
-            </a></li>
-          <li><a href="#">
-              플랜테리어
-            </a></li>
-          <li><a href="#">
-              가드닝 용품
-            </a></li>
-          <li><a href="#">
-              싱그런 여행
-            </a></li>
-          <li><a href="#">
-              친환경라이프
-            </a></li>
+          <li class="sing_tab"><a href="#">전체</a></li>
+          <li class="sing_tab"><a href="#">희귀식물</a></li>
+          <li class="sing_tab"><a href="#">식물/플라워</a></li>
+          <li class="sing_tab"><a href="#">플랜테리어</a></li>
+          <li class="sing_tab"><a href="#">가드닝 용품</a></li>
+          <li class="sing_tab"><a href="#">싱그런 여행</a></li>
+          <li class="sing_tab"><a href="#">친환경라이프</a></li>
         </ul>
       </div>
-      <article class="sst_gallery">
+      <article class="sst_gallery tab_inner">
         <figure>
-          <a href="#">
+          <a class="finset" href="#">
             <div class="thum_img2 thum2-1">
-              <span></span>
             </div>
+            <span></span>
           </a>
           <figcaption>
-            <figcaption>
-              <h4>
-                아침부터 초록초록
-              </h4>
-              <div class="pf">
-                <a href="#">
-                  <div></div>
-                  <p>김쥴리</p>
-                </a>
-              </div>
-            </figcaption>
+            <h4>
+              아침부터 초록초록
+            </h4>
+            <div class="pf">
+              <a href="#">
+                <div></div>
+                <p>김쥴리</p>
+              </a>
+            </div>
           </figcaption>
         </figure>
+
         <figure>
-          <a href="#">
+          <a class="finset" href="#">
             <div class="thum_img2 thum2-2">
-              <span></span>
             </div>
+            <span></span>
           </a>
           <figcaption>
             <figcaption>
@@ -336,11 +357,12 @@
             </figcaption>
           </figcaption>
         </figure>
+
         <figure>
-          <a href="#">
+          <a class="finset" href="#">
             <div class="thum_img2 thum2-3">
-              <span></span>
             </div>
+            <span></span>
           </a>
           <figcaption>
             <h4>
@@ -355,10 +377,10 @@
           </figcaption>
         </figure>
         <figure>
-          <a href="#">
+          <a class="finset" href="#">
             <div class="thum_img2 thum2-4">
-              <span></span>
             </div>
+            <span></span>
           </a>
           <figcaption>
             <h4>
@@ -373,10 +395,10 @@
           </figcaption>
         </figure>
         <figure>
-          <a href="#">
+          <a class="finset" href="#">
             <div class="thum_img2 thum2-5">
-              <span></span>
             </div>
+            <span></span>
           </a>
           <figcaption>
             <h4>
@@ -391,10 +413,10 @@
           </figcaption>
         </figure>
         <figure>
-          <a href="#">
+          <a class="finset" href="#">
             <div class="thum_img2 thum2-6">
-              <span></span>
             </div>
+            <span></span>
           </a>
           <figcaption>
             <h4>
@@ -409,10 +431,10 @@
           </figcaption>
         </figure>
         <figure>
-          <a href="#">
+          <a class="finset" href="#">
             <div class="thum_img2 thum2-7">
-              <span></span>
             </div>
+            <span></span>
             <figcaption>
               <h4>
                 동해 번쩍 서해 번쩍
@@ -426,9 +448,10 @@
             </figcaption>
         </figure>
         <figure class="gall_thum">
-          <div class="thum_img2 thum2-8">
+          <a class="finset" href="#">
+            <div class="thum_img2 thum2-8">
+            </div>
             <span></span>
-          </div>
           </a>
           <figcaption>미니미니 #1
             <ul class="user_id">
@@ -453,7 +476,7 @@
           <li><a href="#" class="green_active">주간랭킹</a></li>
           <li><a href="#">월간랭킹</a></li>
         </ul>
-        <h4 class="lank_date desk">2022.10.10~2022.10.13</h4>
+        <h4 class="lank_date desk">2022.10.10~2022.10.13 기준</h4>
       </div>
       <article class="lank_users">
         <ul>
@@ -930,6 +953,7 @@
       </div>
     </div>
   </footer>
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 

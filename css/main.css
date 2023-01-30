@@ -7,6 +7,8 @@
 .swiper {
   width: 100%;
   height: 100%;
+  position: relative;
+  padding-bottom: 50px;
 }
 
 .swiper-slide {
@@ -38,41 +40,30 @@
 .mobile {
   display: none;
 }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
 .slide_wrap {
+  margin-bottom: 70px;
   padding-top: 30px;
 }
-
-.slide_wrap>img {
-  width: 100%;
+.slide_control{
+  position:absolute;
+  bottom: 30px; right: 100px;
 }
-
-.slide_arrow>ul {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.slide_arrow>ul>li {
-  font-size: 12px;
-  font-weight: 700;
+.slide_prev{
   color: #b3b3b3;
-  line-height: 27px;
-}
-
-.slide_arrow a {
-  display: block;
-  width: 32px;
-  height: 27px;
-  background-size: 7px auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.slide_prev {
   background-image: url(../img/arrow03_l.png);
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-.slide_next {
+.slide_next{
+  color: #b3b3b3;
+  left: 65px;
   background-image: url(../img/arrow03_r.png);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .slide_dot {
@@ -85,25 +76,32 @@
   display: block;
   position: absolute;
   top: calc(50% - 2px);
-  left: -11px;
-  width: 4px;
-  height: 4px;
+  left: 29px;
+  width: 5px;
+  height: 5px;
   border-radius: 2px;
   background-color: #b3b3b3;
+}
+.pagination_container{
+  width: 50px;
+  color: #b3b3b3;
+  position: absolute;
+  bottom: 10px; right: 43px;
 }
 
 .thumnail {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   padding-top: 30px;
 }
 
 .thumnail li {
-  width: 12.5%;
+  width: 12%;
 }
 
 .thumnail li a {
-  width: 60.5%;
+  width: 60%;
 }
 
 .thumnail li a div {
@@ -133,8 +131,8 @@
   width: 16px;
   height: 21px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 25px;
 }
 
 .sec1 .title_wrap {
@@ -186,22 +184,22 @@ h2 {
   margin-right: 8px;
 }
 
-.tab_wrap .green_active {
-  color: #fff;
-  background-color: #009a3e;
-}
 
 .tab2_wrap .green_active {
   color: #fff;
   background-color: #009a3e;
 }
-
 .rank_week .green_active {
   color: #fff;
   background-color: #009a3e;
-
 }
-
+.sing_tab a{
+  color: #4d4d4d;
+}
+.sing_tab.active a {
+  color: #ffffff;
+  background-color: #009a3e;
+}
 .lst_gallery {
   display: flex;
   justify-content: space-between;
@@ -299,7 +297,9 @@ figcaption {
   background-size: 7px auto;
   background-position: right center;
 }
-
+.tab2_wrap{
+  margin-bottom: 30px;
+}
 .tab2_wrap ul {
   display: flex;
 }
@@ -313,6 +313,9 @@ figcaption {
   margin-top: 10px;
   margin-right: 8px;
   border-radius: 4px;
+}
+.tab2_wrap a:hover{
+  background-color: #d9d9d9;
 }
 
 .sst_gallery {
@@ -329,16 +332,31 @@ figcaption {
   font-size: 13px;
   line-height: 18px;
 }
+.finset{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.finset>div{
+  width: 270px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.finset>div:hover{
+  transform: scale(1.05);
+}
 
 .thum_img2 {
-  position: relative;
   padding-bottom: 70%;
   margin-top: 30px;
   margin-right: 6px;
   border-radius: 4px;
+  transition: all 0.4s linear;
 }
 
-.thum_img2>span {
+.finset>span {
   display: block;
   width: 41px;
   height: 47px;
@@ -348,8 +366,9 @@ figcaption {
   right: 0;
 
   background-image: url(../img/scrap.png);
-  background-size: 22px auto;
+  background-size: 24px auto;
   background-repeat: no-repeat;
+
 }
 
 .pf p{
@@ -644,6 +663,7 @@ figcaption {
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .lank_prev {
@@ -651,7 +671,7 @@ figcaption {
 }
 
 .lank_next {
-  background-image: url(../img/_titlearrow06_r.png);
+  background-image: url(../img/arrow06_r.png);
 }
 
 .trip_title ul {

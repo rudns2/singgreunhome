@@ -12,6 +12,7 @@
 }
 .desk {
   display: block;
+  color: #808080;
 }
 .mobile{
   display: none;
